@@ -26,3 +26,79 @@ Reactive Systems are:
 
 ![img.png](img.png)
 
+----
+
+## What is Reactive Programming?
+
+Interactive programs work at their own pace and mostly deal with communication, while reactive programs only work in response to external demands and mostly deal with accurate interrupt handling.
+
+**Reactive programming** is a declarative programming paradigm that entails building asynchronous, non-blocking and event-driven applications that leverage asynchronous data streams and can easily scale.
+
+A Stream can emit three things:
+
+- A value
+- An error
+- A completed signal
+
+### Features of Reactive Programming
+
+- Data Stream
+- Asynchronous
+    - Events are captured asynchronously.
+    - A function is defined to execute when an event is emitted.
+    - Another function is defined if an error is emitted.
+    - This can be a difficult paradigm to adjust to when first getting started.
+- Non-blocking
+  - The concept of using non-blocking is important.
+  - In blocking, the code will stop and wait for more data (ie reading from disk, network, etc).
+  - Non-blocking in contrast, will process available data, ask to be notified when more is available, then continue.
+- Backpressure
+  - The ability of subscriber to throttle data.
+- Failures as Messages
+  - Exceptions are not thrown in a traditional sense.
+  - Would break processing of stream.
+  - Exceptions are processed by a handler function.
+
+### Gang of fours Observer Pattern
+
+![img_1.png](img_1.png)
+
+----
+
+## Reactive Streams API
+
+[https://www.reactive-streams.org/](https://www.reactive-streams.org/)
+
+
+Reactive Streams is an initiative to provide a standard for asynchronous stream processing with non-blocking back pressure. This encompasses efforts aimed at runtime environments (JVM and JavaScript) as well as network protocols.
+
+
+[Java 9 Reactive Streams](https://www.baeldung.com/java-9-reactive-streams)
+
+![img_2.png](img_2.png)
+
+
+### Spring MVC & Spring WebFlux
+
+![img_3.png](img_3.png)
+
+
+## Spring Reactive Types
+
+Two new reactive types are introduced with Spring Framework 5.
+
+- **Mono** - is a publisher with zero or one elements in data stream.
+- **Flux** - is a publisher with zero or MANY elements in the data stream.
+  - Both types implement the Reactive Streams Publisher interface.
+
+
+# How To Create A Spring Boot Project
+
+[https://start.spring.io/](https://start.spring.io/)
+
+![img_4.png](img_4.png)
+
+
+
+
+
